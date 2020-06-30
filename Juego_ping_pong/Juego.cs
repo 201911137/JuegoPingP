@@ -26,7 +26,7 @@ namespace Juego_ping_pong
         {
             InitializeComponent();
             ClientSize = new Size(AnchoPantalla, AlturaPantalla);
-            //Initialize();
+            Inicializar();
             Load += Juego_Load;
             pbJugador2.BackColor = Color.Transparent;
             pbJugador1.BackColor = Color.Transparent;
@@ -57,7 +57,7 @@ namespace Juego_ping_pong
         }
         #endregion
         #region EngineMethods
-        private void Initialize()
+        private void Inicializar()
         {
             random = new Random();
             Jugador1 = new PongOrigen();
