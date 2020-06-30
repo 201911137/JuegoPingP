@@ -1,0 +1,43 @@
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\misarch\Tareas\POO 2\Ping Pong\Juego_ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\Win10\Documents\GitHub\Ping_pong\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Juego.resources
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Juego.resources
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\Users\marlpaz\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Juego.resources
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\Users\EDWIN JOSUE\Source\Repos\Ping_pong\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
