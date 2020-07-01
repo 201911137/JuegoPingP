@@ -48,9 +48,9 @@
             // 
             this.pbJugador1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbJugador1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbJugador1.Location = new System.Drawing.Point(24, 111);
+            this.pbJugador1.Location = new System.Drawing.Point(12, 178);
             this.pbJugador1.Name = "pbJugador1";
-            this.pbJugador1.Size = new System.Drawing.Size(70, 126);
+            this.pbJugador1.Size = new System.Drawing.Size(65, 160);
             this.pbJugador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbJugador1.TabIndex = 2;
             this.pbJugador1.TabStop = false;
@@ -60,18 +60,20 @@
             // 
             this.pbJugador2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.pbJugador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbJugador2.Location = new System.Drawing.Point(940, 111);
+            this.pbJugador2.Location = new System.Drawing.Point(725, 230);
             this.pbJugador2.Name = "pbJugador2";
-            this.pbJugador2.Size = new System.Drawing.Size(70, 126);
+            this.pbJugador2.Size = new System.Drawing.Size(65, 160);
             this.pbJugador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbJugador2.TabIndex = 1;
             this.pbJugador2.TabStop = false;
             // 
             // pbPantallaPequeña
             // 
-            this.pbPantallaPequeña.Location = new System.Drawing.Point(24, 12);
+            this.pbPantallaPequeña.Image = ((System.Drawing.Image)(resources.GetObject("pbPantallaPequeña.Image")));
+            this.pbPantallaPequeña.Location = new System.Drawing.Point(30, 22);
             this.pbPantallaPequeña.Name = "pbPantallaPequeña";
-            this.pbPantallaPequeña.Size = new System.Drawing.Size(100, 50);
+            this.pbPantallaPequeña.Size = new System.Drawing.Size(751, 341);
+            this.pbPantallaPequeña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPantallaPequeña.TabIndex = 4;
             this.pbPantallaPequeña.TabStop = false;
             // 
@@ -88,7 +90,7 @@
             // pbBola
             // 
             this.pbBola.Image = ((System.Drawing.Image)(resources.GetObject("pbBola.Image")));
-            this.pbBola.Location = new System.Drawing.Point(411, 216);
+            this.pbBola.Location = new System.Drawing.Point(312, 67);
             this.pbBola.Name = "pbBola";
             this.pbBola.Size = new System.Drawing.Size(39, 34);
             this.pbBola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,14 +123,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1012, 733);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(793, 425);
             this.Controls.Add(this.lblScore2);
-            this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.pbBola);
-            this.Controls.Add(this.pbPantallaPequeña);
             this.Controls.Add(this.pbJugador1);
             this.Controls.Add(this.pbJugador2);
+            this.Controls.Add(this.lblScore1);
+            this.Controls.Add(this.pbPantallaPequeña);
             this.Name = "Juego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";

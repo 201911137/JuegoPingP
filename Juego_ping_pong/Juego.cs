@@ -28,9 +28,9 @@ namespace Juego_ping_pong
             ClientSize = new Size(AnchoPantalla, AlturaPantalla);
             Inicializar();
             Load += Juego_Load;
-            pbJugador2.BackColor = Color.Transparent;
-            pbJugador1.BackColor = Color.Transparent;
-            pbBola.BackColor = Color.Transparent;
+            //pbJugador2.BackColor = Color.Transparent;
+            //pbJugador1.BackColor = Color.Transparent;
+            //pbBola.BackColor = Color.Transparent;
         }
         #region Metodos del juego
 
@@ -120,7 +120,9 @@ namespace Juego_ping_pong
         }
         #endregion
         #region Mechanics
+
         private int ActualY;
+
         private void ActualizarJugador()
         {
             int JugadorX = 0 + 30;
@@ -224,8 +226,8 @@ namespace Juego_ping_pong
         private void CheckColisionRaqueta()
         {
             if (Bola.EsquIzquierda.X < Jugador1.EsqDerecha.X &&
-                Bola.EsqInferiorIzquierda.Y > Jugador1.EsqInferiorDerecha.Y &&
-                Bola.EsqDerecha.Y < Jugador1.EsqInferiorDerecha.Y)
+                Bola.EsqInferiorIzquierda.Y > Jugador1.EsqDerecha.Y &&
+                Bola.EsquIzquierda.Y < Jugador1.EsqInferiorDerecha.Y)
             {
                 ActualBolaX = GenerarBolaX();
                 if (ActualBolaX < 0)
