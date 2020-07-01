@@ -47,7 +47,6 @@
             // pbJugador1
             // 
             this.pbJugador1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbJugador1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbJugador1.Location = new System.Drawing.Point(12, 178);
             this.pbJugador1.Name = "pbJugador1";
             this.pbJugador1.Size = new System.Drawing.Size(65, 160);
@@ -59,7 +58,6 @@
             // pbJugador2
             // 
             this.pbJugador2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pbJugador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbJugador2.Location = new System.Drawing.Point(725, 230);
             this.pbJugador2.Name = "pbJugador2";
             this.pbJugador2.Size = new System.Drawing.Size(65, 160);
