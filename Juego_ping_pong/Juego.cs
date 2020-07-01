@@ -85,7 +85,7 @@ namespace Juego_ping_pong
             pbBola.Load("Bola.png");
             Bola.Texturas = pbBola;
 
-            pbPantallaPequeña.Load("Fondo.png");
+            pbPantallaPequeña.Load("Logo.png");
             PantallaPequeña.Texturas = pbPantallaPequeña;
         }
         private void ActualizarEscena()

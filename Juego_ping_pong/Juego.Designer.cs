@@ -79,11 +79,13 @@
             // 
             // tmrTiempoActualizar
             // 
+            this.tmrTiempoActualizar.Enabled = true;
             this.tmrTiempoActualizar.Interval = 16;
             this.tmrTiempoActualizar.Tick += new System.EventHandler(this.tmrTiempoActualizar_Tick);
             // 
             // tmrTiempoDibujar
             // 
+            this.tmrTiempoDibujar.Enabled = true;
             this.tmrTiempoDibujar.Interval = 16;
             this.tmrTiempoDibujar.Tick += new System.EventHandler(this.tmrTiempoDibujar_Tick);
             // 
@@ -102,7 +104,7 @@
             this.lblScore2.AutoSize = true;
             this.lblScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lblScore2.Location = new System.Drawing.Point(469, 12);
+            this.lblScore2.Location = new System.Drawing.Point(624, 22);
             this.lblScore2.Name = "lblScore2";
             this.lblScore2.Size = new System.Drawing.Size(166, 181);
             this.lblScore2.TabIndex = 10;
@@ -113,7 +115,7 @@
             this.lblScore1.AutoSize = true;
             this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 120F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lblScore1.Location = new System.Drawing.Point(214, 9);
+            this.lblScore1.Location = new System.Drawing.Point(12, 22);
             this.lblScore1.Name = "lblScore1";
             this.lblScore1.Size = new System.Drawing.Size(166, 181);
             this.lblScore1.TabIndex = 9;
@@ -123,7 +125,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(793, 425);
             this.Controls.Add(this.lblScore2);
             this.Controls.Add(this.pbBola);
@@ -131,6 +133,7 @@
             this.Controls.Add(this.pbJugador2);
             this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.pbPantallaPequeña);
+            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Name = "Juego";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juego";
