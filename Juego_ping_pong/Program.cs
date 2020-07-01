@@ -16,8 +16,8 @@ namespace Juego_ping_pong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Ping_Pong());
-            Application.Run(new Juego());
+            Application.Run(new Ping_Pong());
+            //Application.Run(new Juego());
         }
     }
 }
