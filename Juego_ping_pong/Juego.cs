@@ -7,8 +7,8 @@ namespace Juego_ping_pong
 {
     public partial class Juego : Form
     {   //Parametros del formulario
-        private const int AnchoPantalla = 1028;
-        private const int AlturaPantalla = 768;
+        private const int AnchoPantalla = 800;
+        private const int AlturaPantalla = 428;
         //Velocidad base y Maxima
         private const int BaseVelPelota = 2;
         private int Nivel = 7;
@@ -82,7 +82,7 @@ namespace Juego_ping_pong
             pbJugador2.Load("RacketRigth.png");
             Jugador2.Texturas = pbJugador2;
 
-            pbBola.Load("Bola.png");
+            pbBola.Load("bola.png");
             Bola.Texturas = pbBola;
 
             pbPantallaPequeña.Load("Logo.png");
@@ -137,7 +137,7 @@ namespace Juego_ping_pong
             {
                 Jugador1.Posicion = new Point(JugadorX, Jugador1.Origen.Y + 1);
             }
-            if (Keyboard.IsKeyDown(Key.S))
+            if (Keyboard.IsKeyDown(Key.S)) //movimiento con s hacia abajo
             {
                 if (Jugador2.Texturas.Bottom >= AlturaPantalla)
                 {
@@ -149,7 +149,7 @@ namespace Juego_ping_pong
                 }
                 Jugador2.Posicion = new Point(AnchoPantalla - 30, ActualY);
             }
-            else if (Keyboard.IsKeyDown(Key.W))
+            else if (Keyboard.IsKeyDown(Key.W)) //movimiento con w hacia abajo
             {
                 if (Jugador2.Texturas.Top <= 0)
                 {
@@ -250,6 +250,11 @@ namespace Juego_ping_pong
         }
         #endregion
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbPantallaPequeña_Click(object sender, EventArgs e)
         {
 
         }
