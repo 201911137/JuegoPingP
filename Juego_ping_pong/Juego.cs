@@ -31,6 +31,13 @@ namespace Juego_ping_pong
             //pbJugador2.BackColor = Color.Transparent;
             //pbJugador1.BackColor = Color.Transparent;
             //pbBola.BackColor = Color.Transparent;
+            label1.Parent = pfondo;
+            label2.Parent = pfondo;
+            lblScore1.Parent = pfondo;
+            lblScore2.Parent = pfondo;
+            pbBola.Parent = pfondo;
+            pbJugador1.Parent = pfondo;
+            pbJugador2.Parent = pfondo;
         }
         #region Metodos del juego
 
@@ -153,7 +160,7 @@ namespace Juego_ping_pong
             {
                 if (Jugador2.Texturas.Top <= 0)
                 {
-                    ActualY += 0;
+                    ActualY += 5;
                 }
                 else
                 {
