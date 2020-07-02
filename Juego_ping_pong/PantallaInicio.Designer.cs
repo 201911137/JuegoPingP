@@ -59,9 +59,7 @@
             this.txtP1.TabIndex = 2;
             this.txtP1.Text = "Nombre de Player 1";
             this.txtP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            //this.txtP1.TextChanged += new System.EventHandler(this.txtP1_TextChanged);
             this.txtP1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
-            //this.txtP1.Leave += new System.EventHandler(this.txtP1_Leave);
             // 
             // label1
             // 
@@ -123,7 +121,7 @@
             // 
             this.Imgstart.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Imgstart.Image = global::Juego_ping_pong.Properties.Resources.Comienzo;
-            this.Imgstart.Location = new System.Drawing.Point(256, 312);
+            this.Imgstart.Location = new System.Drawing.Point(258, 270);
             this.Imgstart.Name = "Imgstart";
             this.Imgstart.Size = new System.Drawing.Size(246, 93);
             this.Imgstart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -134,9 +132,9 @@
             // Imgfondo1
             // 
             this.Imgfondo1.Image = ((System.Drawing.Image)(resources.GetObject("Imgfondo1.Image")));
-            this.Imgfondo1.Location = new System.Drawing.Point(-2, 0);
+            this.Imgfondo1.Location = new System.Drawing.Point(-1, -4);
             this.Imgfondo1.Name = "Imgfondo1";
-            this.Imgfondo1.Size = new System.Drawing.Size(804, 489);
+            this.Imgfondo1.Size = new System.Drawing.Size(789, 400);
             this.Imgfondo1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Imgfondo1.TabIndex = 0;
             this.Imgfondo1.TabStop = false;
@@ -146,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 389);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtP2);
             this.Controls.Add(this.label1);
