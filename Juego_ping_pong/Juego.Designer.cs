@@ -38,13 +38,17 @@
             this.pbBola = new System.Windows.Forms.PictureBox();
             this.lblScore2 = new System.Windows.Forms.Label();
             this.lblScore1 = new System.Windows.Forms.Label();
-            this.pfondo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbSet1 = new System.Windows.Forms.PictureBox();
+            this.pbSet2 = new System.Windows.Forms.PictureBox();
+            this.pfondo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbJugador1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbJugador2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPantallaPequeña)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pfondo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +61,6 @@
             this.pbJugador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbJugador1.TabIndex = 2;
             this.pbJugador1.TabStop = false;
-            this.pbJugador1.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pbJugador2
             // 
@@ -78,7 +81,6 @@
             this.pbPantallaPequeña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPantallaPequeña.TabIndex = 4;
             this.pbPantallaPequeña.TabStop = false;
-            this.pbPantallaPequeña.Click += new System.EventHandler(this.pbPantallaPequeña_Click);
             // 
             // tmrTiempoActualizar
             // 
@@ -99,7 +101,7 @@
             this.pbBola.Image = ((System.Drawing.Image)(resources.GetObject("pbBola.Image")));
             this.pbBola.Location = new System.Drawing.Point(369, 189);
             this.pbBola.Name = "pbBola";
-            this.pbBola.Size = new System.Drawing.Size(42, 41);
+            this.pbBola.Size = new System.Drawing.Size(28, 28);
             this.pbBola.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBola.TabIndex = 5;
             this.pbBola.TabStop = false;
@@ -128,17 +130,6 @@
             this.lblScore1.TabIndex = 9;
             this.lblScore1.Text = "0";
             // 
-            // pfondo
-            // 
-            this.pfondo.BackColor = System.Drawing.Color.Transparent;
-            this.pfondo.Image = ((System.Drawing.Image)(resources.GetObject("pfondo.Image")));
-            this.pfondo.Location = new System.Drawing.Point(1, -2);
-            this.pfondo.Name = "pfondo";
-            this.pfondo.Size = new System.Drawing.Size(794, 426);
-            this.pfondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pfondo.TabIndex = 11;
-            this.pfondo.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -163,12 +154,45 @@
             this.label2.TabIndex = 13;
             this.label2.Text = "Marcador";
             // 
+            // pbSet1
+            // 
+            this.pbSet1.BackColor = System.Drawing.Color.Transparent;
+            this.pbSet1.Location = new System.Drawing.Point(124, 9);
+            this.pbSet1.Name = "pbSet1";
+            this.pbSet1.Size = new System.Drawing.Size(124, 25);
+            this.pbSet1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSet1.TabIndex = 14;
+            this.pbSet1.TabStop = false;
+            // 
+            // pbSet2
+            // 
+            this.pbSet2.BackColor = System.Drawing.Color.Transparent;
+            this.pbSet2.Location = new System.Drawing.Point(532, 388);
+            this.pbSet2.Name = "pbSet2";
+            this.pbSet2.Size = new System.Drawing.Size(124, 25);
+            this.pbSet2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSet2.TabIndex = 15;
+            this.pbSet2.TabStop = false;
+            // 
+            // pfondo
+            // 
+            this.pfondo.BackColor = System.Drawing.Color.Transparent;
+            this.pfondo.Image = ((System.Drawing.Image)(resources.GetObject("pfondo.Image")));
+            this.pfondo.Location = new System.Drawing.Point(1, -2);
+            this.pfondo.Name = "pfondo";
+            this.pfondo.Size = new System.Drawing.Size(794, 426);
+            this.pfondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pfondo.TabIndex = 11;
+            this.pfondo.TabStop = false;
+            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(793, 425);
+            this.Controls.Add(this.pbSet2);
+            this.Controls.Add(this.pbSet1);
             this.Controls.Add(this.pbJugador2);
             this.Controls.Add(this.pbJugador1);
             this.Controls.Add(this.pbBola);
@@ -187,6 +211,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbJugador2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPantallaPequeña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pfondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -204,8 +230,10 @@
         private System.Windows.Forms.PictureBox pbBola;
         private System.Windows.Forms.Label lblScore2;
         private System.Windows.Forms.Label lblScore1;
-        private System.Windows.Forms.PictureBox pfondo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pbSet1;
+        private System.Windows.Forms.PictureBox pbSet2;
+        private System.Windows.Forms.PictureBox pfondo;
     }
 }

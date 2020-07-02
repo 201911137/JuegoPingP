@@ -15,6 +15,8 @@ namespace Juego_ping_pong
         //Elementos para Jugar
         private PongOrigen Jugador1;
         private PongOrigen Jugador2;
+        private PongOrigen Set1;
+        private PongOrigen Set2;
         private PongBola Bola;
         //Pantalla del juego y variable aleatoria para movimiento de pelota
         private PongCubo PantallaPequeña;
@@ -22,6 +24,8 @@ namespace Juego_ping_pong
         //Puntaje de los jugadores
         private int PuntuacionJ1;
         private int PuntuacionJ2;
+        private int SetGanados1;
+        private int SetGanados2;
         public Juego()
         {
             InitializeComponent();
@@ -38,6 +42,8 @@ namespace Juego_ping_pong
             pbBola.Parent = pfondo;
             pbJugador1.Parent = pfondo;
             pbJugador2.Parent = pfondo;
+            pbSet1.Parent = pfondo;
+            pbSet2.Parent = pfondo;
         }
         #region Metodos del juego
 
@@ -68,6 +74,8 @@ namespace Juego_ping_pong
         {
             random = new Random();
             Jugador1 = new PongOrigen();
+            Set1 = new PongOrigen();
+            Set2 = new PongOrigen();
             Jugador2 = new PongOrigen
             {
                 Posicion = new Point(AnchoPantalla - 3, AlturaPantalla / 2)
@@ -88,6 +96,12 @@ namespace Juego_ping_pong
 
             pbJugador2.Load("RacketRigth.png");
             Jugador2.Texturas = pbJugador2;
+
+            pbSet1.Load("Set0.png");
+            Set1.Texturas = pbSet1;
+
+            pbSet2.Load("Set0.png");
+            Set2.Texturas = pbSet2;
 
             pbBola.Load("bola.png");
             Bola.Texturas = pbBola;
@@ -221,13 +235,17 @@ namespace Juego_ping_pong
             {
                 ResetearBola();
                 PuntuacionJ2 += 1;
-                lblScore2.Text = PuntuacionJ2.ToString();
+                //lblScore2.Text = PuntuacionJ2.ToString();
+                PuntosLimite();
+                Set();
             }
             else if (pbBola.Right > AnchoPantalla)
             {
                 ResetearBola();
                 PuntuacionJ1 += 1;
-                lblScore1.Text = PuntuacionJ1.ToString();
+                //lblScore1.Text = PuntuacionJ1.ToString();
+                PuntosLimite();
+                Set();
             }
         }
         private void CheckColisionRaqueta()
@@ -256,13 +274,92 @@ namespace Juego_ping_pong
             }
         }
         #endregion
-        private void pictureBox2_Click(object sender, EventArgs e)
+        #region Puntos & Set´s
+        private void PuntosLimite()
         {
-
+            switch (PuntuacionJ1)
+            {
+                case 1:
+                    lblScore1.Text = "15";
+                    break;
+                case 2:
+                    lblScore1.Text = "30";
+                    break;
+                case 3:
+                    lblScore1.Text = "40";
+                    break;
+                case 4:
+                    PuntuacionJ1 = 0;
+                    PuntuacionJ2 = 0;
+                    lblScore1.Text = "0";
+                    lblScore2.Text = "0";
+                    SetGanados1 += 1;
+                    //MessageBox.Show(SetGanados1.ToString());
+                    break;
+            }
+            switch (PuntuacionJ2)
+            {
+                case 1:
+                    lblScore2.Text = "15";
+                    break;
+                case 2:
+                    lblScore2.Text = "30";
+                    break;
+                case 3:
+                    lblScore2.Text = "40";
+                    break;
+                case 4:
+                    PuntuacionJ1 = 0;
+                    PuntuacionJ2 = 0;
+                    lblScore1.Text = "0";
+                    lblScore2.Text = "0";
+                    SetGanados2 += 1;
+                    //MessageBox.Show(SetGanados2.ToString());
+                    break;
+            }
         }
-
-        private void pbPantallaPequeña_Click(object sender, EventArgs e)
+        private void Set()
         {
+            switch (SetGanados1)
+            {
+                case 1:
+                    pbSet1.Load("Set1-0.png");
+                    Set1.Texturas = pbSet1;
+                    break;
+                case 2:
+                    pbSet1.Load("Set2-0.png");
+                    Set1.Texturas = pbSet1;
+                    break;
+                case 3:
+                    pbSet1.Load("Set3-0.png");
+                    Set1.Texturas = pbSet1;
+                    break;
+                case 4:
+                    pbSet1.Load("Set4-0.png");
+                    Set1.Texturas = pbSet1;
+                    break;
+            }
+
+            switch (SetGanados2)
+            {
+                case 1:
+                    pbSet2.Load("Set0-1.png");
+                    Set2.Texturas = pbSet2;
+                    break;
+                case 2:
+                    pbSet2.Load("Set0-2.png");
+                    Set2.Texturas = pbSet2;
+                    break;
+                case 3:
+                    pbSet2.Load("Set0-3.png");
+                    Set2.Texturas = pbSet2;
+                    break;
+                case 4:
+                    pbSet2.Load("Set0-4.png");
+                    Set2.Texturas = pbSet2;
+                    break;
+            }
+            #endregion
 
         }
     }
