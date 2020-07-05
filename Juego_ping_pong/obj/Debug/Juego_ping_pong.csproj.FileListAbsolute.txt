@@ -63,3 +63,14 @@ C:\Users\Win10\source\repos\201911137\JuegoPingP\Juego_ping_pong\obj\Debug\Juego
 C:\Users\Win10\source\repos\201911137\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
 C:\Users\Win10\source\repos\201911137\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
 C:\Users\Win10\source\repos\201911137\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.Juego.resources
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb

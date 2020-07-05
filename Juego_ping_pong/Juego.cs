@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Input;
 
+
 namespace Juego_ping_pong
 {
     public partial class Juego : Form
@@ -26,6 +27,8 @@ namespace Juego_ping_pong
         private int PuntuacionJ2;
         private int SetGanados1;
         private int SetGanados2;
+     
+
         public Juego()
         {
             InitializeComponent();
@@ -318,6 +321,8 @@ namespace Juego_ping_pong
                     break;
             }
         }
+        
+
         private void Set()
         {
             switch (SetGanados1)
@@ -337,6 +342,10 @@ namespace Juego_ping_pong
                 case 4:
                     pbSet1.Load("Set4-0.png");
                     Set1.Texturas = pbSet1;
+                    this.tmrTiempoActualizar.Stop();
+                    this.tmrTiempoDibujar.Stop();
+                    MessageBox.Show("Felicidades " + ClasePublica.NombrePlayer1 + " Usted ha ganado.");
+                    this.Close();
                     break;
             }
 
@@ -357,6 +366,10 @@ namespace Juego_ping_pong
                 case 4:
                     pbSet2.Load("Set0-4.png");
                     Set2.Texturas = pbSet2;
+                    this.tmrTiempoActualizar.Stop();
+                    this.tmrTiempoDibujar.Stop();
+                    MessageBox.Show("Felicidades " + ClasePublica.NombrePlayer2 + " Usted ha ganado.");
+                    this.Close();
                     break;
             }
             #endregion

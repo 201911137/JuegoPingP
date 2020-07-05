@@ -1,5 +1,11 @@
-﻿namespace Juego_ping_pong
+﻿using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
+using System.Windows.Media;
+
+namespace Juego_ping_pong
 {
+
+
     partial class Ping_Pong
     {
         /// <summary>
@@ -19,6 +25,9 @@
             }
             base.Dispose(disposing);
         }
+
+
+
 
         #region Código generado por el Diseñador de Windows Forms
 
@@ -157,6 +166,7 @@
             this.Name = "Ping_Pong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ping_Pong";
+            //this.Load += new System.EventHandler(this.Ping_Pong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Imgstart)).EndInit();

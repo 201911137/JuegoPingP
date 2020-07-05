@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Juego_ping_pong
 {
     public partial class Ping_Pong : Form
     {
+
         int p1 = 0, p2=0;
         public Ping_Pong()
         {
@@ -51,12 +54,13 @@ namespace Juego_ping_pong
                         p1 = 1;
 
                         this.txtP1.Enabled = false;
+                        ClasePublica.NombrePlayer1 = this.label1.Text;
                     }
                 }
             }
         }
 
-  
+
         private void txtP2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -81,6 +85,7 @@ namespace Juego_ping_pong
                         p2 = 1;
 
                         this.txtP2.Enabled = false;
+                        ClasePublica.NombrePlayer2 = this.label2.Text;
                     }
                 }
             }
