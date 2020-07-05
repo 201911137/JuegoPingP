@@ -2,12 +2,25 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Input;
-
+using System.Net;
+using System.Net.Sockets;
 
 namespace Juego_ping_pong
 {
     public partial class Juego : Form
-    {   //Parametros del formulario
+    {
+        //Parametros socket
+        public Socket clientSocket;
+        public string strName;
+        public byte[] byteData = new byte[1024];
+        SocketFiles.Data msgToSend;
+        SocketFiles.Data msgReceived;
+        bool isMultiplayer;
+        bool isServer;
+        string player;
+        string serverIP;
+
+        //Parametros del formulario
         private const int AnchoPantalla = 800;
         private const int AlturaPantalla = 428;
         //Velocidad base y Maxima
@@ -29,7 +42,7 @@ namespace Juego_ping_pong
         private int SetGanados2;
      
 
-        public Juego()
+        public Juego(bool IsmultiPlayer, bool isserver, string playerName, string serveriP)
         {
             InitializeComponent();
             ClientSize = new Size(AnchoPantalla, AlturaPantalla);
@@ -47,6 +60,11 @@ namespace Juego_ping_pong
             pbJugador2.Parent = pfondo;
             pbSet1.Parent = pfondo;
             pbSet2.Parent = pfondo;
+
+            isMultiplayer = IsmultiPlayer;
+            isServer = isserver;
+            player = playerName;
+            serverIP = serveriP;
         }
         #region Metodos del juego
 
@@ -55,21 +73,65 @@ namespace Juego_ping_pong
             _isGameRunning = true;
             ResetearBola();
             pbPantallaPequeña.Hide();
-
         }
         #endregion
         #region Eventos
         private void Juego_Load(object sender, EventArgs e)
         {
             CargarGraficos();
+
+            if(isMultiplayer==true && isServer==false)
+            {
+                try
+                {
+                    CheckForIllegalCrossThreadCalls = false;
+                    strName = player;
+                    this.Text = strName;
+                    clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                    IPAddress ipAddress = IPAddress.Parse(serverIP);
+                    //Server is listening on port 1000
+                    IPEndPoint ipEndPoint = new IPEndPoint(ipAddress, 1000);
+
+                    //Connect to the server
+                    clientSocket.BeginConnect(ipEndPoint, new AsyncCallback(OnConnect), null);
+
+                    MessageBox.Show("Connected");
+
+                    msgToSend = new SocketFiles.Data();
+                    msgToSend.cmdCommand = SocketFiles.Command.List;
+                    msgToSend.strName = strName;
+                    msgToSend.strMessage = null;
+
+                    byteData = msgToSend.ToByte();
+
+                    clientSocket.BeginSend(byteData, 0, byteData.Length, SocketFlags.None, new AsyncCallback(OnSend), null);
+
+                    byteData = new byte[1024];
+
+                    //Start listening to the data asynchronously
+                    clientSocket.BeginReceive(byteData,
+                                               0,
+                                               byteData.Length,
+                                               SocketFlags.None,
+                                               new AsyncCallback(OnReceive),
+                                               null);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
         private void tmrTiempoActualizar_Tick(object sender, EventArgs e)
         {
             ActualizarEscena();
+
         }
         private void tmrTiempoDibujar_Tick(object sender, EventArgs e)
         {
             DibujarEscena();
+
         }
         #endregion
         #region EngineMethods
@@ -374,6 +436,108 @@ namespace Juego_ping_pong
             }
             #endregion
 
+        }
+
+
+        private void OnSend(IAsyncResult ar)
+        {
+            try
+            {
+                clientSocket.EndSend(ar);
+                strName = player;
+                DialogResult = DialogResult.OK;
+
+                //tStatus.Text = "Connected to Server!";
+                //tStatus.ForeColor = Color.DarkGreen;
+                ////Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SGSclient", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void OnConnect(IAsyncResult ar)
+        {
+            try
+            {
+                clientSocket.EndConnect(ar);
+
+                //We are connected so we login into the server
+                msgToSend = new SocketFiles.Data();
+                msgToSend.cmdCommand = SocketFiles.Command.Login;
+                msgToSend.strName = player;
+                msgToSend.strMessage = null;
+
+                byte[] b = msgToSend.ToByte();
+
+                //Send the message to the server
+                clientSocket.BeginSend(b, 0, b.Length, SocketFlags.None, new AsyncCallback(OnSend), null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SGSclient", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void OnReceive(IAsyncResult ar)
+        {
+            try
+            {
+                clientSocket.EndReceive(ar);
+
+                msgReceived = new SocketFiles.Data(byteData);
+                //Accordingly process the message received
+                switch (msgReceived.cmdCommand)
+                {
+                    case SocketFiles.Command.Login:
+                        //lstChatters.Items.Add(msgReceived.strName);
+                        break;
+
+                    case SocketFiles.Command.Logout:
+                        //lstChatters.Items.Remove(msgReceived.strName);
+                        break;
+
+                    case SocketFiles.Command.Message:
+                        //TODO
+                        break;
+
+                    case SocketFiles.Command.List:
+
+                        //lstChatters.Items.AddRange(msgReceived.strMessage.Split('*'));
+                        //lstChatters.Items.RemoveAt(lstChatters.Items.Count - 1);
+                        //txtChatBox.Text += "<<<" + strName + " Ha entrado al Juego>>>\r\n";
+                        break;
+                }
+
+                //if (msgReceived.strMessage != null && msgReceived.cmdCommand != Command.List)
+                //    txtChatBox.Text += msgReceived.strMessage + "\r\n";
+
+                byteData = new byte[1024];
+
+                clientSocket.BeginReceive(byteData,0,byteData.Length,SocketFlags.None,new AsyncCallback(OnReceive),null);
+
+            }
+            catch (ObjectDisposedException)
+            { }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SGSclientTCP: " + strName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void pfondo_Click(object sender, EventArgs e)
+        {
+            if (tmrTiempoActualizar.Enabled ==true)
+            {
+                tmrTiempoActualizar.Stop();
+                tmrTiempoDibujar.Stop();
+            }
+            else
+            {
+                tmrTiempoActualizar.Start();
+                tmrTiempoDibujar.Start();
+            }
         }
     }
 }

@@ -184,6 +184,7 @@
             this.pfondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pfondo.TabIndex = 11;
             this.pfondo.TabStop = false;
+            this.pfondo.Click += new System.EventHandler(this.pfondo_Click);
             // 
             // Juego
             // 

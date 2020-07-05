@@ -253,6 +253,7 @@ namespace Juego_ping_pong
             this.bConnect.TabIndex = 13;
             this.bConnect.Text = "Connect";
             this.bConnect.UseVisualStyleBackColor = true;
+            this.bConnect.Click += new System.EventHandler(this.bConnect_Click);
             // 
             // label4
             // 

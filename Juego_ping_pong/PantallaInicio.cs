@@ -17,6 +17,7 @@ namespace Juego_ping_pong
 {
     public partial class Ping_Pong : Form
     {
+        bool isServer=false;
 
         int p1 = 0, p2=0;
         public Ping_Pong()
@@ -29,7 +30,7 @@ namespace Juego_ping_pong
         {
             if(p1 == 1 || p2 == 1)
             {
-                Juego frm = new Juego();
+                Juego frm = new Juego(gMultiplayer.Visible, isServer, txtName.Text, txtServerIP.Text);
                 frm.Show();
             }
 
@@ -67,10 +68,12 @@ namespace Juego_ping_pong
         {
             try
             {
+                isServer = true;
                 SocketFiles.SocketServer SS = new SocketFiles.SocketServer();
                 tStatus.Text = "Server started!";
                 tStatus.ForeColor = Color.DarkGreen;
-
+                
+                //comienzo_click(sender, e);
             }
             catch (Exception ex)
             {
@@ -88,6 +91,12 @@ namespace Juego_ping_pong
             {
                 gMultiplayer.Visible = false;
             }
+        }
+
+        private void bConnect_Click(object sender, EventArgs e)
+        {
+            isServer = false;
+            comienzo_click(sender, e);
         }
 
         private void txtP2_KeyPress(object sender, KeyPressEventArgs e)
