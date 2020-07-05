@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Net;
+using System.Net.Sockets;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 
 namespace Juego_ping_pong
@@ -60,6 +63,32 @@ namespace Juego_ping_pong
             }
         }
 
+        private void bStartHost_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SocketFiles.SocketServer SS = new SocketFiles.SocketServer();
+                tStatus.Text = "Server started!";
+                tStatus.ForeColor = Color.DarkGreen;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void bMultiPlayer_Click(object sender, EventArgs e)
+        {
+            if(gMultiplayer.Visible==false)
+            {
+                gMultiplayer.Visible = true;
+            }
+            else
+            {
+                gMultiplayer.Visible = false;
+            }
+        }
 
         private void txtP2_KeyPress(object sender, KeyPressEventArgs e)
         {

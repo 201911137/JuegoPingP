@@ -74,3 +74,14 @@ C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\obj\Debug\Juego_ping_
 C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
 C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
 C:\Users\marlpaz\Desktop\JuegoPingP-master\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe.config
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\bin\Debug\Juego_ping_pong.exe
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\bin\Debug\Juego_ping_pong.pdb
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.csprojAssemblyReference.cache
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.Ping_Pong.resources
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.Juego.resources
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.Properties.Resources.resources
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.GenerateResource.cache
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.csproj.CoreCompileInputs.cache
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.exe
+C:\Users\luisl\Source\Repos\JuegoPingP\Juego_ping_pong\obj\Debug\Juego_ping_pong.pdb
