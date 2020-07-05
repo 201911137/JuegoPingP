@@ -10,6 +10,5 @@ namespace Juego_ping_pong
     {
         public static string NombrePlayer1;
         public static string NombrePlayer2;
-        public static string hola;
     }
 }
